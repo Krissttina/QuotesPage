@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .quote{
+            width: 20%;
+            border-bottom: 3px solid green;
+            margin: 92px;
+            height: 53px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <section class="quote">
+        <p>“Свободата е само част от историята и половината от истината… 
+            Затова предлагам освен статуята на Свободата на източния бряг, 
+            да бъде поставена статуя на Отговорността на западния бряг!”</p>
+        <p>~ Victor E. Frankl.</p>
+    </section>
+    <script>
+        const quote = document.querySelector('p');
+        const section = document.querySelector('.quote');
+
+        quote.addEventListener('mouseover', () => {
+                section.style.overflow ='visible';
+                section.style.height = '100%';
+        })
+
+        quote.addEventListener('mouseout', () => {   
+            section.style.color = 'black'
+            section.style.overflow ='hidden';
+            section.style.height = '';
+    })
+
+    </script>
+</body>
+</html>
